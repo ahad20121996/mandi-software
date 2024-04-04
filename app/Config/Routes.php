@@ -7,32 +7,51 @@ use CodeIgniter\Router\RouteCollection;
  */
 // $routes->get('/', 'Home::index');
 
-// $routes->get('/', 'HomeController::index');
-
-// $routes->group('admin', function request)
-
-$routes->get('/admin', 'AdminController::index');
-$routes->get('/login', 'AdminController::login');
-$routes->get('/profile', 'AdminController::showProfile');
-
-$routes->get('/add-crate', 'BrandController::addCrate');
-$routes->get('/crate-list', 'BrandController::crateList');
-
-$routes->get('/add-customer', 'CustomerController::addCustomer');
-$routes->get('/customer-list', 'CustomerController::customerList');
-
-$routes->get('/add-dealer', 'DealerController::addDealer');
-$routes->get('/dealer-list', 'DealerController::dealerList');
-
-$routes->get('/add-user', 'UserController::addUser');
-$routes->get('/user-list', 'UserController::userList');
-
-$routes->get('/crate-reports', 'ReportsController::showCrate');
-$routes->get('/customer-reports', 'ReportsController::showCustomer');
-$routes->get('/dealer-reports', 'ReportsController::showDealer');
-
 // SuperAdmin
-$routes->get('/create-company', 'SuperAdminController::createCompany');
-$routes->get('/', 'SuperAdminController::SuperAdminHome');
-$routes->get('/company-list', 'SuperAdminController::companyList');
+$routes->group('super-admin', function ($routes) {
+    $routes->get('/', 'SuperAdminController::SuperAdminHome');
+    $routes->get('login', 'SuperAdminController::login');
+    $routes->get('profile', 'SuperAdminController::showProfile');
+
+    $routes->get('create-company', 'SuperAdminController::createCompany');
+    $routes->get('company-list', 'SuperAdminController::companyList');
+});
+
+
+// COMPANY
+$routes->group('company', function ($routes) {
+    $routes->get('/', 'CompanyController::index');
+    $routes->get('login', 'CompanyController::login');
+    $routes->get('profile', 'CompanyController::showProfile');
+
+    // CRATES
+    $routes->get('add-crate', 'CompanyController::addCrate');
+    $routes->get('crate-list', 'CompanyController::crateList');
+
+    // CUSTOMERS
+    $routes->get('add-customer', 'CompanyController::addCustomer');
+    $routes->get('customer-list', 'CompanyController::customerList');
+
+    //DEALERS
+    $routes->get('add-dealer', 'CompanyController::addDealer');
+    $routes->get('dealer-list', 'CompanyController::dealerList');
+
+    //USERS
+
+    $routes->get('add-user', 'CompanyController::addUser');
+    $routes->get('user-list', 'CompanyController::userList');
+
+    //REPORTS
+    $routes->get('crate-reports', 'CompanyController::showCrate');
+    $routes->get('customer-reports', 'CompanyController::showCustomer');
+    $routes->get('dealer-reports', 'CompanyController::showDealer');
+
+});
+
+// EMPLOYEE
+$routes->group('employee', function($routes) {
+    $routes->get('/', 'EmployeeController::index');
+    $routes->get('login', 'EmployeeController::login');
+    $routes->get('profile', 'EmployeeController::showProfile');
+});
 

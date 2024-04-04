@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Software</title>
-    <link rel="shortcut icon" type="image/png" href="./assets/images/logos/favicon.png" />
-    <link rel="stylesheet" href="./assets/css/styles.min.css" />
+    <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.png" />
+    <link rel="stylesheet" href="../assets/css/styles.min.css" />
 </head>
 
 <style>
@@ -43,7 +43,7 @@
             <div>
                 <div class="brand-logo d-flex align-items-center justify-content-between">
                     <a href="./index.html" class="text-nowrap logo-img">
-                        <img class="logo-dashboard p-2" src="./assets/images/logos/affy-logo.png" width="180" alt="" />
+                        <img class="logo-dashboard p-2" src="../assets/images/logos/affy-logo.png" width="180" alt="" />
                     </a>
                     <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
                         <i class="ti ti-x fs-8"></i>
@@ -113,7 +113,7 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2"
                                     data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="./assets/images/profile/user-1.jpg" alt="" width="35" height="35"
+                                    <img src="../assets/images/profile/user-1.jpg" alt="" width="35" height="35"
                                         class="rounded-circle">
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up"
@@ -133,7 +133,7 @@
                                 </a> -->
                                         <a href="<?= base_url('employee/profile') ?>"
                                             class="btn btn-outline-success mx-3 mt-2 d-block">Profile</a>
-                                        <a href="<?= base_url('/login') ?>"
+                                        <a href="<?= base_url('employee/login') ?>"
                                             class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
                                     </div>
                                 </div>

@@ -9,15 +9,25 @@ class SuperAdminController extends BaseController
 {
     public function SuperAdminHome()
     {
-        return view('/index');
+        return view('super_admin/index');
     }
+
+    public function login()
+    {
+        return view('login');
+    }
+
     public function createCompany()
     {
-        return view('create-company');
+        return view('super_admin/create-company');
     }
     public function CompanyList()
     {
-        return view('company-list');
+        return view('super_admin/company-list');
+    }
+    public function showProfile()
+    {
+        return view('super_admin/profile');
     }
 
 }
