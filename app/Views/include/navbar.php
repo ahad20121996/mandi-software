@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Modernize Free</title>
+    <title>Software</title>
     <link rel="shortcut icon" type="image/png" href="./assets/images/logos/favicon.png" />
     <link rel="stylesheet" href="./assets/css/styles.min.css" />
 </head>
@@ -21,7 +21,7 @@
     .logo-dashboard {
         width: 70px;
         object-fit: contain;
-        padding: 5 px;
+        padding: 5px;
     }
 
     .sidebar-nav {
@@ -71,101 +71,22 @@
                             <span class="hide-menu">Crates</span>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="<?= base_url('add-crate') ?>" aria-expanded="false">
+                            <a class="sidebar-link" href="<?= base_url('/') ?>" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-pencil"></i>
                                 </span>
-                                <span class="hide-menu">Add Brand</span>
+                                <span class="hide-menu">Create Company</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="<?= base_url('crate-list') ?>" aria-expanded="false">
+                            <a class="sidebar-link" href="<?= base_url('company-list') ?>" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-article"></i>
                                 </span>
-                                <span class="hide-menu">Brand List</span>
+                                <span class="hide-menu">Company List</span>
                             </a>
                         </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link" href="<?= base_url('add-customer') ?>" aria-expanded="false">
-                                <span>
-                                    <i class="ti ti-article"></i>
-                                </span>
-                                <span class="hide-menu">Customer Form</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link" href="<?= base_url('customer-list') ?>" aria-expanded="false">
-                                <span>
-                                    <i class="ti ti-article"></i>
-                                </span>
-                                <span class="hide-menu">Customer List</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link" href="<?= base_url('add-dealer') ?>" aria-expanded="false">
-                                <span>
-                                    <i class="ti ti-article"></i>
-                                </span>
-                                <span class="hide-menu">Dealer Form</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link" href="<?= base_url('dealer-list') ?>" aria-expanded="false">
-                                <span>
-                                    <i class="ti ti-article"></i>
-                                </span>
-                                <span class="hide-menu">Dealer List</span>
-                            </a>
-                        </li>
-                        <li class="nav-small-cap">
-                            <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                            <span class="hide-menu">Users</span>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link" href="<?= base_url('add-user') ?>" aria-expanded="false">
-                                <span>
-                                    <i class="ti ti-pencil"></i>
-                                </span>
-                                <span class="hide-menu">Add User</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link" href="<?= base_url('user-list') ?>" aria-expanded="false">
-                                <span>
-                                    <i class="ti ti-article"></i>
-                                </span>
-                                <span class="hide-menu">User List</span>
-                            </a>
-                        </li>
-                        <li class="nav-small-cap">
-                            <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                            <span class="hide-menu">Reports</span>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link" href="<?= base_url('crate-reports') ?>" aria-expanded="false">
-                                <span>
-                                    <i class="ti ti-article"></i>
-                                </span>
-                                <span class="hide-menu">Crate Reports</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link" href="<?= base_url('customer-reports') ?>" aria-expanded="false">
-                                <span>
-                                    <i class="ti ti-article"></i>
-                                </span>
-                                <span class="hide-menu">Customer Reports</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link" href="<?= base_url('dealer-reports') ?>" aria-expanded="false">
-                                <span>
-                                    <i class="ti ti-article"></i>
-                                </span>
-                                <span class="hide-menu">Dealer Reports</span>
-                            </a>
-                        </li>
+                       
 
                     </ul>
                 </nav>

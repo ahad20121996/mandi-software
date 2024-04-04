@@ -5,7 +5,7 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
+// $routes->get('/', 'Home::index');
 
 // $routes->get('/', 'HomeController::index');
 
@@ -30,4 +30,9 @@ $routes->get('/user-list', 'UserController::userList');
 $routes->get('/crate-reports', 'ReportsController::showCrate');
 $routes->get('/customer-reports', 'ReportsController::showCustomer');
 $routes->get('/dealer-reports', 'ReportsController::showDealer');
+
+// SuperAdmin
+$routes->get('/create-company', 'SuperAdminController::createCompany');
+$routes->get('/', 'SuperAdminController::SuperAdminHome');
+$routes->get('/company-list', 'SuperAdminController::companyList');
 
