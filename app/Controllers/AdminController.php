@@ -17,4 +17,9 @@ class AdminController extends BaseController
         return view('login');
     }
 
+    public function showProfile()
+    {
+        return view('profile');
+    }
+
 }

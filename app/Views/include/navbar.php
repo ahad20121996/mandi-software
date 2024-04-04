@@ -59,7 +59,7 @@
                             <span class="hide-menu">Dashboard</span>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="./" aria-expanded="false">
+                            <a class="sidebar-link" href="<?= base_url('admin') ?>" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-layout-dashboard"></i>
                                 </span>
@@ -71,7 +71,7 @@
                             <span class="hide-menu">Crates</span>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="./add-crate.php" aria-expanded="false">
+                            <a class="sidebar-link" href="<?= base_url('add-crate') ?>" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-pencil"></i>
                                 </span>
@@ -79,7 +79,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="./crate-list.php" aria-expanded="false">
+                            <a class="sidebar-link" href="<?= base_url('crate-list') ?>" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-article"></i>
                                 </span>
@@ -87,7 +87,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="./add-customer.php" aria-expanded="false">
+                            <a class="sidebar-link" href="<?= base_url('add-customer') ?>" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-article"></i>
                                 </span>
@@ -95,7 +95,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="./customer-list.php" aria-expanded="false">
+                            <a class="sidebar-link" href="<?= base_url('customer-list') ?>" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-article"></i>
                                 </span>
@@ -103,7 +103,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="./add-dealer.php" aria-expanded="false">
+                            <a class="sidebar-link" href="<?= base_url('add-dealer') ?>" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-article"></i>
                                 </span>
@@ -111,7 +111,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="./dealer-list.php" aria-expanded="false">
+                            <a class="sidebar-link" href="<?= base_url('dealer-list') ?>" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-article"></i>
                                 </span>
@@ -123,7 +123,7 @@
                             <span class="hide-menu">Users</span>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="./add-user.php" aria-expanded="false">
+                            <a class="sidebar-link" href="<?= base_url('add-user') ?>" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-pencil"></i>
                                 </span>
@@ -131,7 +131,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="./user-list.php" aria-expanded="false">
+                            <a class="sidebar-link" href="<?= base_url('user-list') ?>" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-article"></i>
                                 </span>
@@ -143,7 +143,7 @@
                             <span class="hide-menu">Reports</span>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="./crate-reports.php" aria-expanded="false">
+                            <a class="sidebar-link" href="<?= base_url('crate-reports') ?>" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-article"></i>
                                 </span>
@@ -151,7 +151,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="./customer-reports.php" aria-expanded="false">
+                            <a class="sidebar-link" href="<?= base_url('customer-reports') ?>" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-article"></i>
                                 </span>
@@ -159,7 +159,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="./dealer-reports.php" aria-expanded="false">
+                            <a class="sidebar-link" href="<?= base_url('dealer-reports') ?>" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-article"></i>
                                 </span>
@@ -210,9 +210,9 @@
                                     <i class="ti ti-list-check fs-6"></i>
                                     <p class="mb-0 fs-3">My Task</p>
                                 </a> -->
-                                        <a href="./profile.php"
+                                        <a href="<?= base_url('profile') ?>"
                                             class="btn btn-outline-success mx-3 mt-2 d-block">Profile</a>
-                                        <a href="./login.php"
+                                        <a href="<?= base_url('/login') ?>"
                                             class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
                                     </div>
                                 </div>

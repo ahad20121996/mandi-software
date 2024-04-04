@@ -11,4 +11,10 @@ class BrandController extends BaseController
     {
         return view('add-crate');
     }
+
+    public function crateList()
+    {
+        return view('crate-list');
+    }
+
 }
