@@ -53,5 +53,9 @@ $routes->group('employee', function($routes) {
     $routes->get('/', 'EmployeeController::index');
     $routes->get('login', 'EmployeeController::login');
     $routes->get('profile', 'EmployeeController::showProfile');
+    $routes->get('add-customer', 'EmployeeController::addCustomer');
+    $routes->get('add-dealer', 'EmployeeController::addDealer');
+    $routes->get('customer-reports', 'EmployeeController::customerReport');
+    $routes->get('dealer-reports', 'EmployeeController::dealerReport');
 });
 

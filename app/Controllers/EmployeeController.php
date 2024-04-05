@@ -21,4 +21,21 @@ class EmployeeController extends BaseController
     {
         return view('login');
     }
+
+    public function addCustomer()
+    {
+        return view('employee/add-customer');
+    }
+    public function addDealer()
+    {
+        return view('employee/add-dealer');
+    }
+    public function customerReport()
+    {
+        return view('employee/customer-reports');
+    }
+    public function dealerReport()
+    {
+        return view('employee/dealer-reports');
+    }
 }
