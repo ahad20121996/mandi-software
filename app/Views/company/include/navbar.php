@@ -7,6 +7,9 @@
     <title>Software</title>
     <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.png" />
     <link rel="stylesheet" href="../assets/css/styles.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/css/select2.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 
 <style>
@@ -69,20 +72,20 @@
                             <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
                             <span class="hide-menu">Crates</span>
                         </li>
-                        <li class="sidebar-item">
+                        <!-- <li class="sidebar-item">
                             <a class="sidebar-link" href="<?= base_url('company/add-crate') ?>" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-pencil"></i>
                                 </span>
                                 <span class="hide-menu">Add Brand</span>
                             </a>
-                        </li>
+                        </li> -->
                         <li class="sidebar-item">
                             <a class="sidebar-link" href="<?= base_url('company/crate-list') ?>" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-article"></i>
                                 </span>
-                                <span class="hide-menu">Brand List</span>
+                                <span class="hide-menu">Brands</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
