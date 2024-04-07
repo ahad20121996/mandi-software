@@ -48,9 +48,18 @@ require 'include/navbar.php';
                     <div class="container">
                         <div class="row">
 
+                            <!-- <div class="col-md-12 my-2">
+                        <label class="mb-2" for="profile"><b>Select Crate For</b></label>
+                        <br>
+                        <select class="py-2 w-100" name="crate_for" id="crate_for">
+                            <option value="" selected disabled>Select Crate For</option>
+                            <option value="Customer">Customer</option>
+                            <option value="Dealer">Dealer</option>
+                        </select>
+                        </div> -->
                             <div class="col-md-3 my-2">
                                 <label class="mb-2" for="crate_name"><b> Customer Name</b></label>
-                                <select class="py-2 w-100" name="customername" id="customername">
+                                <select class="py-2 w-100" name="crate_for" id="crate_for">
                                     <option value="" selected disabled>Select Customer</option>
                                     <option value="Customer">Customer 1</option>
                                     <option value="Dealer">Customer 2</option>
@@ -75,8 +84,8 @@ require 'include/navbar.php';
                                 <button type="button" class="btn addbtn my-2 p-1" id="openbrandModal">+Add</button>
                             </div>
                             <div class="col-md-3 my-2">
-                                <label class="mb-2" for="select_unit"><b>Units</b></label>
-                                <select class="py-2 w-100" name="select_unit" id="select_unit">
+                                <label class="mb-2" for="crate_name"><b>Units</b></label>
+                                <select class="py-2 w-100" name="crate_for" id="crate_for">
                                     <option value="" selected disabled>Select Units</option>
                                     <option value="Jama">Jama</option>
                                     <option value="Becha">Becha</option>

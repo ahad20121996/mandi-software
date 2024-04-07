@@ -105,18 +105,28 @@ require 'include/navbar.php';
                 <th>Action</th>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Google</td>
-                    <td>googl@gmail.com</td>
-                    <td>98765443</td>
-                    <td>
-                        <button>Edit</button>
-                        <button>Active</button>
-                        <button>DeActive</button>
-                        <button>Delete</button>
-                    </td>
-                </tr>
+                <?php foreach ($companyData as $key => $row) { ?>
+                    <tr>
+                        <td><?= ++$key ?></td>
+                        <td class="company-name"><?= $row->company_name ?></td>
+                        <td><?= $row->user_name ?></td>
+                        <td><?= $row->mobile ?></td>
+                        <td><?= $row->email ?></td>
+                        <td>
+                            <?php
+                            if ($row->status == 0) { ?>
+                                <a href="<?php echo base_url("company-active-deactive/$row->company_id/1"); ?>" title="Deactive"><button onclick="return confirm('Are you sure you want to Deactivate this company?')" class="btn btn-danger">Deactive</button></a>
+                            <?php  } else { ?>
+                                <a href="<?php echo base_url("company-active-deactive/$row->company_id/0"); ?>" title="Active"><button onclick="return confirm('Are you sure you want to Active this company?')" class="btn btn-primary">Active</button></a>
+                            <?php   }
+                            ?>
+                        </td>
+                        <td>
+                            <a href="<?php echo base_url("company-edit/$row->company_id"); ?>" title="Edit"><i style="cursor:pointer;" class="ti ti-pencil"></i></a>
+                            <a href="<?php echo base_url("company-delete/$row->company_id"); ?>" title="Delete"><i onclick="return confirm('Are you sure you want to Delete this company?')" style="cursor:pointer; color:red" class="ti ti-trash"></i></a>
+                        </td>
+                    </tr>
+                <?php  } ?>
             </tbody>
         </table>
     </div>

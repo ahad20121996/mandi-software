@@ -12,7 +12,7 @@ class CompanyModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['company_name', 'user_name', 'user_id', 'email', 'mobile', 'password'];
+    protected $allowedFields    = ['company_name', 'user_name', 'user_id', 'email', 'mobile', 'password','is_delete','status','created_at'];
 
     protected bool $allowEmptyInserts = false;
 

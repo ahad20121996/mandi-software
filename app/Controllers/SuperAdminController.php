@@ -20,7 +20,8 @@ class SuperAdminController extends BaseController
     }
     public function SuperAdminHome()
     {
-        return view('super_admin/index');
+        $companyData = $this->CompanyModel->select('*')->where('is_delete', '0')->orderBy('company_id', 'desc')->limit(10)->get()->getResult();
+        return view('super_admin/index', compact('companyData'));
     }
 
     public function login()
@@ -39,7 +40,9 @@ class SuperAdminController extends BaseController
 
     public function createCompany()
     {
-        return view('super_admin/create-company');
+        $title = "Edit";
+        $formSave = base_url() . "save-company-data";
+        return view('super_admin/create-company', compact("formSave", "title"));
     }
     public function SaveCompanyData()
     {
@@ -75,16 +78,16 @@ class SuperAdminController extends BaseController
         $dataInsert =  $this->CompanyModel->insert($dataKeyValue);
         if ($dataInsert) {
             $this->session->setFlashdata('success', 'Company Successfully Insert');
-            return redirect()->to(base_url("super-admin"));
+            return redirect()->to(base_url("company-list"));
         } else {
             $this->session->setFlashdata('error', 'Something Went Wrong');
-            return redirect()->to(base_url("super-admin"));
+            return redirect()->to(base_url("company-list"));
         }
     }
     public function CompanyList()
     {
-        $row = $this->superAdminModel->select('*')->where('is_delete', '0')->get()->getResult();
-        return view('super_admin/company-list');
+        $companyData = $this->CompanyModel->select('*')->where('is_delete', '0')->orderBy('company_id', 'desc')->get()->getResult();
+        return view('super_admin/company-list', compact("companyData"));
     }
     public function showProfile()
     {
@@ -95,6 +98,54 @@ class SuperAdminController extends BaseController
     {
         $randomNumber = rand(1000, 9999);
         return 'affy' . $randomNumber;
+    }
+    public function companyActiveDeative($id, $flag)
+    {
+        $this->CompanyModel->set('status', $flag)->where('company_id', $id)->update();
+        if ($flag == 0) {
+            $this->session->setFlashdata('success', 'Company Successfully Deactive');
+            return redirect()->to(base_url("company-list"));
+        } else {
+            $this->session->setFlashdata('success', 'Company Successfully Active');
+            return redirect()->to(base_url("company-list"));
+        }
+    }
+    public function companyDelete($id)
+    {
+        $this->CompanyModel->set('is_delete', 1)->where('company_id', $id)->update();
+        $this->session->setFlashdata('success', 'Company Successfully Deleted');
+        return redirect()->to(base_url("company-list"));
+    }
+
+    public function companyEdit($id)
+    {
+        $showPassword = true;
+        $title = "Update";
+        $formSave = base_url() . "update-company-data";
+        $companyData = $this->CompanyModel->select('*')->where('company_id', $id)->get()->getRow();
+        return view('super_admin/create-company', compact("formSave", "companyData", "showPassword", "title"));
+    }
+    public function updateCompanyData()
+    {
+        $company_id  = $_POST['id'];
+        $dataKeyValue = [
+            'company_name' => $_POST['company_name'],
+            'user_name' => $_POST['user_name'],
+            'email' => $_POST['email'],
+            'mobile' => $_POST['mobile'],
+            'updated_at' => date('Y-m-d H:i:s'),
+        ];
+        if (!empty($_POST['password'])) {
+            $dataKeyValue['password'] = md5($_POST['password']);
+        }
+        $dataInsert =  $this->CompanyModel->set($dataKeyValue)->where("company_id", $company_id)->update();
+        if ($dataInsert) {
+            $this->session->setFlashdata('success', 'Company Successfully Update');
+            return redirect()->to(base_url("company-list"));
+        } else {
+            $this->session->setFlashdata('error', 'Something Went Wrong');
+            return redirect()->to(base_url("company-list"));
+        }
     }
     public function logout()
     {

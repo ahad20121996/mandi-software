@@ -9,6 +9,8 @@ use CodeIgniter\Filters\Honeypot;
 use CodeIgniter\Filters\InvalidChars;
 use CodeIgniter\Filters\SecureHeaders;
 use App\Filters\FilterSuperAdmin;
+use App\Filters\FilterCompany;
+use App\Filters\FilterEmployee;
 
 class Filters extends BaseConfig
 {
@@ -26,6 +28,8 @@ class Filters extends BaseConfig
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
         'FilterSuperAdmin' => FilterSuperAdmin::class,
+        'FilterCompany' => FilterCompany::class,
+        'FilterEmployee' => FilterEmployee::class,
     ];
 
     /**

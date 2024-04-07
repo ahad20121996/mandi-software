@@ -48,19 +48,21 @@ require 'include/navbar.php';
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6 my-2">
-                                <label class="mb-2" for="dealername"><b> Customer Name</b></label>
-                                <select class="py-2 w-100" name="dealername" id="dealername">
-                                    <option value="" selected disabled>Select Dealer</option>
-                                    <option value="Dealer">Dealer 1</option>
-                                    <option value="Dealer">Dealer 2</option>
-                                    <option value="Dealer">Dealer 3</option>
+                                <label class="mb-2" for="crate_name"><b> Customer Name</b></label>
+                                <select class="py-2 w-100" name="crate_for" id="crate_for">
+                                    <option value="" selected disabled>Select Customer</option>
+                                    <option value="Customer">Customer 1</option>
+                                    <option value="Dealer">Customer 2</option>
+                                    <option value="Dealer">Customer 3</option>
+                                    <option value="Dealer">Customer 4</option>
+                                    <option value="Dealer">Customer 5</option>
                                 </select>
                                 <button type="button" class="btn addbtn my-2 p-1" id="openCustomerModal">+Add</button>
                             </div>
                             <div class="col-md-6 my-2">
                                 <label class="mb-2" for="crate_name"><b> Crate Brand</b></label>
 
-                                <select class="py-2 w-100" name="crate_for" id="crate_for" multiple>
+                                <select class="py-2 w-100" name="crate_for" id="crate_for">
                                     <option value="" selected disabled>Select Crate</option>
                                     <option value="Customer">Crate 1</option>
                                     <option value="Dealer">Crate 2</option>
@@ -71,8 +73,8 @@ require 'include/navbar.php';
                                 <button type="button" class="btn addbtn my-2 p-1" id="openbrandModal">+Add</button>
                             </div>
                             <div class="col-md-4 my-2">
-                                <label class="mb-2" for="select_unit"><b>Units</b></label>
-                                <select class="py-2 w-100" name="select_unit" id="select_unit">
+                                <label class="mb-2" for="crate_name"><b>Units</b></label>
+                                <select class="py-2 w-100" name="crate_for" id="crate_for">
                                     <option value="" selected disabled>Select Units</option>
                                     <option value="Jama">Jama</option>
                                     <option value="Becha">Becha</option>
